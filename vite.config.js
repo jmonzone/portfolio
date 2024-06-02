@@ -8,4 +8,11 @@ export default defineConfig({
     host: "localhost",
     port: 8080,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/_variables.scss";`,
+      },
+    },
+  },
 });
