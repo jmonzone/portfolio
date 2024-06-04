@@ -9,19 +9,22 @@ import Styles from "./index.module.scss";
 import { css } from "../../utils";
 import Section from "../../components/Section";
 import { useNavigate } from "react-router-dom";
+import { Preview } from "../../components/Preview";
+import environmentImage from "../../assets/environment.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
   return (
     <div>
-      <div className={css(Styles.intro)}>
-        <div className={css(Styles.gradient)}>
+      <Preview type="background" path={environmentImage}>
+        <div className={css(Styles.intro)}>
           <div className={css(Styles.name)}>Jonan</div>
           <div className={css(Styles.title)}>Game Design & Development</div>
         </div>
-      </div>
+      </Preview>
+
       <Section header={"Project Spotlight"}>
-        <div className={css(Styles.title)}>Mycelium</div>
+        <div className={css(Styles.spotlight)}>Mycelium</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

@@ -1,0 +1,35 @@
+.preview {
+  position: relative;
+  pointer-events: none;
+
+  $height: 80vh;
+  height: $height;
+  background-color: black;
+
+  text-align: center;
+  text-shadow: black 0px 1px 1px;
+
+  .gradient {
+    position: absolute;
+    top: calc($height * 0.6);
+    height: calc($height * 0.4);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+      to bottom,
+      #00000000 0%,
+      rgba(0, 0, 0, 0.745) 100%
+    );
+  }
+}
+
+.canvasContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: auto; /* Allow pointer events on the canvas-container */
+
+  background: linear-gradient(to bottom, #00000000 0%, $background-color 100%);
+}
