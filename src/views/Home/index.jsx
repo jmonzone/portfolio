@@ -38,7 +38,7 @@ export default function Home() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo
         </p>
-        <button onClick={() => navigate(`about`)}>More Information</button>
+        <button onClick={() => navigate(`elvtr`)}>More Information</button>
       </Section>
       <Section header={"All Projects"} background={false} />
       <Section header={"About"} />
