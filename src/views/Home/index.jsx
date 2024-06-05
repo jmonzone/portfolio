@@ -23,7 +23,8 @@ export default function Home() {
         </div>
       </Preview>
 
-      <Section header={"Project Spotlight"}>
+      <Section>
+        <h1>Project Spotlight</h1>
         <div className={css(Styles.spotlight)}>Mycelium</div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -40,8 +41,8 @@ export default function Home() {
         </p>
         <button onClick={() => navigate(`elvtr`)}>More Information</button>
       </Section>
-      <Section header={"All Projects"} background={false} />
-      <Section header={"About"} />
+      <Section />
+      <Section />
     </div>
   );
 }

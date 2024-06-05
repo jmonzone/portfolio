@@ -1,28 +1,22 @@
 .section {
   position: relative;
-  height: 60vh;
-  padding: 5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 5rem;
+  background-color: $background-color-fade;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 20px;
 
-  .header {
-    font-size: 1.5rem;
+  p,
+  ul,
+  li {
+    font-size: 1rem;
+    max-width: calc(50vw - 5rem);
   }
 
-  p {
-    font-size: 1rem;
-    max-width: 30rem;
-  }
-
-  button {
-    margin-top: 3rem;
-    font-size: 1rem;
-    padding: 1rem;
-    width: 15rem;
-    font-family: "Inria Serif", serif; /* Apply Inria Serif font */
+  &:nth-child(2n) {
+    background-color: $background-color;
+    box-shadow: black 0px 5px 20px;
   }
 }
 
-.background {
-  background-color: $background-color;
-  box-shadow: black 0px 5px 20px;
+img {
+  max-width: 100%;
 }
