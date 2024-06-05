@@ -37,7 +37,7 @@ export function Preview({ type, path, options, children }) {
           <PerspectiveCamera
             position={[0, type == "background" ? 0 : 2, 10]}
             makeDefault
-          />{" "}
+          />
           <OrbitControls
             autoRotate
             autoRotateSpeed={0.2}
