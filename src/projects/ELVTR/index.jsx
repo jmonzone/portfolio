@@ -20,41 +20,6 @@ import Section from "../../components/Section";
 import { css } from "../../utils";
 
 export default function ELVTR() {
-  const documentList = [
-    {
-      label: "Player Journey",
-      icon: journeyIcon,
-    },
-    {
-      label: "Paper Prototype",
-      icon: prototypeIcon,
-    },
-    {
-      label: "Flow Chart",
-      icon: flowchartIcon,
-    },
-    {
-      label: "Wireframe",
-      icon: wireframe,
-    },
-    {
-      label: "Usability Test",
-      icon: usability,
-    },
-    {
-      label: "UI Moodboard",
-      icon: moodboard,
-    },
-    {
-      label: "UI Mockups",
-      icon: mockup,
-    },
-    {
-      label: "Accessibility Test",
-      icon: accessibility,
-    },
-  ];
-
   const sectionList = [
     {
       label: "Player Journey",
@@ -71,6 +36,44 @@ export default function ELVTR() {
     {
       label: "UI Mockups & Colorblindness Checks",
       file: mockupFile,
+    },
+  ];
+
+  const iconList = [
+    {
+      label: "Player Journey",
+      icon: journeyIcon,
+      file: sectionList[0].file,
+    },
+    {
+      label: "Paper Prototype",
+      icon: prototypeIcon,
+      link: sectionList[1].file,
+    },
+    {
+      label: "Flow Chart",
+      icon: flowchartIcon,
+      link: sectionList[1].file,
+    },
+    {
+      label: "Wireframe",
+      icon: wireframe,
+      link: sectionList[2].file,
+    },
+    {
+      label: "Usability Test",
+      icon: usability,
+      link: sectionList[2].file,
+    },
+    {
+      label: "UI Mockups",
+      icon: mockup,
+      link: sectionList[3].file,
+    },
+    {
+      label: "Accessibility Test",
+      icon: accessibility,
+      link: sectionList[3].file,
     },
   ];
 
@@ -95,11 +98,14 @@ export default function ELVTR() {
         <h1>Overview</h1>
         <p>
           Bridging the gap between my technical background and Game UX/UI - in
-          order to enhance communications between the two disciplines, by
+          order to enhance communications between the two disciplines by
           breaking down UI screens and features into user flow charts and
           mockups.
         </p>
-        <p>Length of this Project: 8 Weeks</p>
+        <br />
+
+        <h1>Length of this Project</h1>
+        <p>8 Weeks</p>
         <br />
         <h1>Challenges</h1>
         <ul>
@@ -120,12 +126,15 @@ export default function ELVTR() {
       <Section>
         <h1>Work Process</h1>
         <div className={css(Styles.processContainer)}>
-          {documentList.map((document, index) => (
+          {iconList.map((icon, index) => (
             <>
               {index > 0 && <img className={css(Styles.arrow)} src={arrow} />}
-              <div className={css(Styles.process)}>
-                <img src={document.icon} />
-                <div>{document.label}</div>
+              <div
+                className={css(Styles.process)}
+                onClick={() => window.open(icon.file)}
+              >
+                <img src={icon.icon} />
+                <div>{icon.label}</div>
               </div>
             </>
           ))}

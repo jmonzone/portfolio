@@ -25,6 +25,14 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .preview {
+    .gradient {
+      pointer-events: all;
+    }
+  }
+}
+
 .canvasContainer {
   position: fixed;
   width: 100vw;
